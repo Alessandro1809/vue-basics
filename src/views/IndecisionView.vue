@@ -4,24 +4,19 @@ import ChatMessages from '@/components/chat/ChatMessages.vue';
 import MessageBox from '@/components/chat/MessageBox.vue';
 import { useChat } from '@/composables/useChat';
 
-
-const { messages,onMessage } = useChat();
-
-
-
+const { messages, onMessage } = useChat();
 </script>
 
-
 <template>
-    <div class="bg-gray-100 h-screen flex flex-col max-w-lg mx-auto">
-      <div class="bg-green-500 p-4 text-white flex justify-between items-center">
-        <span>Mi Moi</span>
-      </div>
-  
-      <!-- Messages -->
-       <ChatMessages :messages="messages"/>
-  
-     <!-- MessageBox -->
-      <MessageBox @send-message="onMessage"/>
+  <div class="bg-gray-100 h-screen flex flex-col max-w-lg mx-auto">
+    <div class="bg-green-500 p-4 text-white flex justify-between items-center">
+      <span>Simulator chat</span>
     </div>
-  </template>
+
+    <!-- Messages -->
+    <ChatMessages :messages="messages" />
+
+    <!-- MessageBox -->
+    <MessageBox @send-message="onMessage" />
+  </div>
+</template>
